@@ -24,6 +24,6 @@ itchio-downloader --url "https://rigs-of-rods.itch.io/rigs-of-rods" --platform l
 mkdir -p ./AppDir/bin
 bsdtar -xvf game-2066563.zip
 rm -f *.zip
-sed -i 's#PluginFolder=lib#PluginFolder=$AppDir/lib#' plugins.cfg
+sed -i 's#PluginFolder=lib#PluginFolder=$APPDIR/lib#' plugins.cfg
 mv -v RoR plugins.cfg resources languages content ./AppDir/bin
 mv -v lib/* /usr/lib
