@@ -10,11 +10,12 @@ export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/RigsOfRods/rigs-of-rods/refs/heads/master/doc/images/rorlogo.png
 export DESKTOP=DUMMY
-export MAIN_BIN=RoR
+export MAIN_BIN=RunRoR
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/RoR /usr/lib/Plugin*.so* /usr/lib/Render*.so* /usr/lib/libMyGUI*.so* /usr/lib/libOgre*.so* /usr/lib/Codec*.so* /usr/lib/fips.so /usr/lib/legacy.so
+#quick-sharun ./AppDir/bin/RoR /usr/lib/Plugin*.so* /usr/lib/Render*.so* /usr/lib/libMyGUI*.so* /usr/lib/libOgre*.so* /usr/lib/Codec*.so* /usr/lib/fips.so /usr/lib/legacy.so
+quick-sharun ./AppDir/bin/*
 #echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
