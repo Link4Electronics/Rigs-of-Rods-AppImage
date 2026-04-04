@@ -30,4 +30,5 @@ patchelf --set-rpath '$ORIGIN' ./lib/*.so*
 rm -f ./*.zip ./RunRoR
 
 # TODO find a way to set version automatically
-echo '2026.01' > ~/version
+git ls-remote --tags --sort="v:refname" https://github.com/RigsOfRods/rigs-of-rods | tail -n1 | sed 's/.*\///' > ~/version
+#echo '2026.01' > ~/version
