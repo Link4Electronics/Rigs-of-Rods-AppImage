@@ -1,4 +1,4 @@
 #!/bin/false
 dir=$HOME/.rigsofrods
 mkdir -p "$dir"
-cd "$dir"
+#cd "$dir"
