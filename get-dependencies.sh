@@ -31,7 +31,7 @@ patchelf --set-rpath '$ORIGIN/lib' ./RoR
 patchelf --set-rpath '$ORIGIN' ./lib/*.so*
 rm -f ./*.zip ./RunRoR
 
-# TODO find a way to set version automatically, will leavea this as reference in case dev doesn't sync with GH releases
+# TODO find a way to set version automatically, will leave this as reference in case dev doesn't sync with GH releases tag version
 #echo '2026.01' > ~/version
 VERSION="$(git ls-remote --tags --sort="v:refname" https://github.com/RigsOfRods/rigs-of-rods | grep -o '20[0-9]\{2\}\.[0-9]\{2\}' | tail -n1)"
 echo "$VERSION" > ~/version
