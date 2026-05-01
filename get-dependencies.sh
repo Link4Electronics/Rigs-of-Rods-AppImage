@@ -9,6 +9,7 @@ echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     libxaw         \
     openal         \
+    npm            \
     pipewire-alsa  \
     pipewire-audio
 
@@ -17,12 +18,13 @@ echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
 # Comment this out if you need an AUR package
-make-aur-package itchio-downloader
+#make-aur-package itchio-downloader
 
 # If the application needs to be manually built that has to be done down here
 echo "Getting app..."
 echo "---------------------------------------------------------------"
 mkdir -p ./AppDir/bin
+npm install -g itchio-downloader@latest
 cd ./AppDir/bin
 itchio-downloader --url "https://rigs-of-rods.itch.io/rigs-of-rods" --platform linux --downloadDirectory .
 bsdtar -xvf ./game-2066563.zip
